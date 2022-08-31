@@ -10,6 +10,10 @@
   <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
   <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
   <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+
+  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
 </div>
     </div>
 </template>

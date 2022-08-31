@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="nav">
       <input id="menu__toggle" type="checkbox" />
           <label class="menu__btn" for="menu__toggle">
             <span></span>
@@ -35,6 +35,9 @@
 </script>
 
 <style scoped>
+  #nav{
+    height: 0;
+  }
 #menu__toggle {
   opacity: 0;
   z-index: 4;
