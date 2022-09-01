@@ -37,10 +37,10 @@
 <style scoped>
   #nav{
     height: 0;
+    z-index: 4;
   }
 #menu__toggle {
   opacity: 0;
-  z-index: 4;
 }
 #menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);

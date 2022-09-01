@@ -37,6 +37,11 @@ const routes = [
     component: () => import('../views/login.vue')
   },
   {
+    path: '/singlepet',
+    name: 'singlepet',
+    component: () => import('../views/singlepet.vue')
+  },
+  {
     path: '/contact',
     name: 'contact',
     component: () => import('../views/contact.vue')
