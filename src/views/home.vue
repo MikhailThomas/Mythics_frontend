@@ -3,7 +3,7 @@
     <div class="sp-container">
       <div class="sp-content">
         <div class="sp-globe"></div>
-        <h2 class="frame-1">HI THERE</h2>
+        <h2 class="frame-1"></h2>
         <h2 class="frame-2"></h2>
         <h2 class="frame-3">WELCOME TO...</h2>
         <h2 class="frame-4"></h2>
@@ -11,7 +11,7 @@
         <p class="frame-6">we are here to</p>
   <div class="button frame-7" id="frame-7">
     <div id="dub-arrow"><i class="bi bi-book fs-4"></i></div>
-    <a href="#about">Read More</a>
+    <a href="/about">Read More</a>
   </div>
       </div>
     </div>
@@ -38,7 +38,6 @@ export default {
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 0;
 	background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
 }
 .sp-content {
@@ -47,7 +46,6 @@ export default {
 	height: 100%;
 	left: 0px;
 	top: 0px;
-	z-index: 1000;
 }
 .sp-container h2 {
 	position: absolute;
@@ -65,13 +63,13 @@ export default {
 	animation-delay: 0s;
 }
 .sp-container h2.frame-2 {
-	animation-delay: 2s;
+	animation-delay: 0s;
 }
 .sp-container h2.frame-3 {
-	animation-delay: 3s;
+	animation-delay: 0s;
 }
 .sp-container h2.frame-4 {
-	animation-delay: 5s;
+	animation-delay: s;
 }
 .sp-container h2.frame-5 {
 	animation: none;
@@ -79,18 +77,18 @@ export default {
 	text-shadow: 0px 0px 1px #fff;
 }
 .sp-container h2.frame-5 span {
-	animation: blurFadeIn 3s ease-in 6s backwards;
+	animation: blurFadeIn 3s ease-in 3s backwards;
   color: lightblue;
 	text-shadow: 0px 0px 1px #fff;
 }
 .sp-container p.frame-6 {
 	text-shadow: 0px 0px 1px #fff;
-  animation: blurFadeIn 2s ease-in 7s backwards;
+  animation: blurFadeIn 2s ease-in 4s backwards;
   padding-top: 3rem;
 }
 .sp-container div.frame-7 {
 	text-shadow: 0px 0px 1px #fff;
-  animation: blurFadeIn 2s ease-in 9s backwards;
+  animation: blurFadeIn 2s ease-in 5s backwards;
 }
 .sp-globe {
 	position: absolute;

@@ -35,10 +35,9 @@
 </script>
 
 <style scoped>
-  #nav{
-    height: 0;
-    z-index: 4;
-  }
+#nav{
+  height: 0;
+}
 #menu__toggle {
   opacity: 0;
 }
@@ -62,7 +61,7 @@
   left: 20px;
   width: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 99;
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -73,6 +72,7 @@
   height: 3px;
   background-color: black;
   transition-duration: 0.25s;
+  z-index: 999;
 }
 .menu__btn > span::before {
   content: "";

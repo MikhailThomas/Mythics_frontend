@@ -2,37 +2,17 @@
   <div class="wrapper">
     <h1>Pets looking for new homes</h1>
     <div class="row">
-      <div id="card" class="col-4" ontouchstart="this.classList.toggle('hover');">
-        <div class="container">
-          <div
-            class="front"
-            style="background-image: url(https://unsplash.it/500/500/)"
-          >
-            <div class="inner">
-              <p>Diligord</p>
-              <span>Lorem ipsum</span>
-            </div>
-          </div>
-          <div class="back">
-            <div class="inner">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-                cum repellat.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="col-4" ontouchstart="this.classList.toggle('hover');">
         <div class="container">
           <div
             class="front"
-            style="background-image: url(https://unsplash.it/500/500/)"
+            style="background-image: url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg/500/500/)"
           >
             <div class="inner">
               <p>Diligord</p>
               <span>Lorem ipsum</span>
             </div>
+            <img src="../assets/Tony_dragon-removebg-preview.png" alt="" />
           </div>
           <div class="back">
             <div class="inner">
@@ -44,27 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4" ontouchstart="this.classList.toggle('hover');">
-        <div class="container">
-          <div
-            class="front"
-            style="background-image: url(https://unsplash.it/500/500/)"
-          >
-            <div class="inner">
-              <p>Diligord</p>
-              <span>Lorem ipsum</span>
-            </div>
-          </div>
-          <div class="back">
-            <div class="inner">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-                cum repellat.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- card 2 -->
     </div>
   </div>
 </template>
@@ -74,21 +34,18 @@ export default {};
 </script>
 
 <style scoped>
-
 h1 {
   font-size: 2.5rem;
-  font-family: "Montserrat";
   font-weight: normal;
-  color: #444;
   text-align: center;
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .wrapper {
   min-height: 100vh;
   max-width: 100%;
-  margin: 0 auto;
-  max-width: 80rem;
+  margin: 2rem auto;
+  max-width: 80vw;
   z-index: 3;
 }
 
@@ -100,7 +57,11 @@ h1 {
 
 .container {
   transform-style: preserve-3d;
-  perspective: 1000px;
+}
+
+img {
+  width: 100%;
+  transform: translateZ(30px) scale(1.2);
 }
 
 .front,
@@ -114,7 +75,6 @@ h1 {
   height: auto;
   border-radius: 10px;
   color: #fff;
-  font-size: 1.5rem;
 }
 
 .back {
@@ -131,7 +91,6 @@ h1 {
   content: "";
   display: block;
   opacity: 0.6;
-  background-color: #000;
   backface-visibility: hidden;
   border-radius: 10px;
 }
@@ -148,12 +107,11 @@ h1 {
 }
 
 .inner {
-  transform: translateY(-50%) translateZ(60px) scale(0.94);
-  top: 50%;
+  transform: translateY(-50%) translateZ(50px) scale(0.94);
+  bottom: 0;
   position: absolute;
   left: 0;
   width: 100%;
-  padding: 2rem;
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: inherit;
@@ -181,8 +139,8 @@ h1 {
 }
 
 .front .inner p {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -196,13 +154,7 @@ h1 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: -0.75rem;
-}
-
-.front .inner span {
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "Montserrat";
-  font-weight: 300;
+  bottom: -0.5rem;
 }
 
 @media screen and (max-width: 64rem) {

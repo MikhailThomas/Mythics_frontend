@@ -1,144 +1,192 @@
 <template>
-  <div class="container">
-    <div class="form-wrapper" id="wrapper-login">
-        <div class="content-wrapper" id="content-signin">
-            <h1>Hello!</h1>
-            <form class="form-login">
-                <input type="text" name="username" placeholder="Username" class="input-username" />
-                <input type="password" name="password" placeholder="Password" class="input-password" />
-                <button type="submit" class="btn-login">LOGIN</button>
-            </form>
-            <p>No account? <a href="#wrapper-signup">Sign up</a></p>
+<div class="box">
+    <div class="title-text">
+        <div id="Login" class="title login">
+            login form
+        </div>
+        <div class="title signup">
+            signup form
         </div>
     </div>
-    <div class="form-wrapper" id="wrapper-signup">
-        <div class="content-wrapper" id="content-signin">
-            <h1>Join us!</h1>
-            <form class="form-login">
-                <input type="email" name="email" placeholder="Email address" class="input-email" />
-                <input type="text" name="username" placeholder="Username" class="input-username" />
-                <input type="password" name="password" placeholder="Password" class="input-password" />
-                <button type="submit" class="btn-login">SIGN UP</button>
-            </form>
-            <p>Got account? <a href="#wrapper-login">Sign in</a></p>
+    <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slider" id="login" checked>
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slide-tab">
+
+                </div>
+            </div>
+            <div class="form-inner">
+                <form action="#" class="login-form">
+                    <div class="field">
+                        <input type="text" placeholder="Emailadress" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="password" required>
+                    </div>
+                    <div class="field">
+                        <input type="submit" value="login">
+                    </div>
+                    <div class="signup-link">don't have an account?<a href="signup">signup now</a></div>
+                </form>
+                <!-- sign up -->
+                <form action="#" class="signup">
+                    <div class="field">
+                        <input type="text" placeholder="Emailadress" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="password" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="confirm password" required>
+                    </div>
+                    <div class="field">
+                        <input type="submit" value="signup">
+                    </div>
+                    <div class="signup-link">don't have an account?<a href="signup">signup now</a></div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
-export default {
-
-}
+const loginForm = document.getElementsByClassName(".login");
+const signupForm = document.getElementsByClassName(".signup");
+const loginBtn = document.getElementsByClassName(".login");
+const signupBtn = document.getElementsByClassName(".signup");
+const signupLink = document.getElementsByClassName(".signup-link a");
+const loginText = document.getElementsByClassName(".title-text .login");
+const signupText = document.getElementsByClassName(".title-text .signup");
+signupBtn.onclick = (() =>{
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (() =>{
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+});
+signupLink.onclick = (() =>{
+    signupBtn.click();
+    return false;
+});
 </script>
 
 <style scoped>
-    .container{
-        background: linear-gradient(black, blue);
-    }
-.form-wrapper {
-    border-radius: 4px;
-    background: #2F366D;
-    color: #FDF3F8;
-    box-shadow: 0px 1px 10px 3px rgba(145, 125, 160, 1);
-    position: absolute;
-    left: 50%;
-    transform: translate( -50%);
+.box{
+    max-width: 400px;
+    border-radius: 10px;
+    border-radius: 0px 15px 20px rgba(0,0,0,0.1);
     overflow: hidden;
 }
-
-
-.form-wrapper .content-wrapper {
-    opacity: 1;
-    width: 320px;
-    height: 500px;
+.title-text{
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    width: 200%;
 }
-
-.form-login {
-    margin: 4rem auto;
+.title{
+    width: 50%;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
-.form-login input {
-    margin: 5px auto;
-    display: block;
-    border-radius: 4px;
-    background: none;
-    color: rgba(253, 243, 248, 1);
-    border: 2px solid rgba(85, 112, 172, .8);
-    padding: 10px;
-    width: 200px;
-    font-weight: bolder;
-    transition: all .3s ease;
+.form-container{
+width: 100%;
+overflow: hidden;
 }
-
-.form-login button {
+.slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
     width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    display: block;
-    font-weight: bolder;
-    color: #FDF3F8;
-    background: #ec6838;
-    border: none;
-    border-radius: 4px;
-    transition: all .3s ease;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 2px solid lightblue;
 }
-
-.form-login input:focus {
-    outline: none;
-    color: rgba(253, 243, 248, 1);
-    background: rgba(85, 112, 172, .8);
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(85, 112, 172, .8);
-}
-
-.form-login input:hover {
-    color: rgba(253, 243, 248, 1);
-    background: rgba(85, 112, 172, .8);
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(85, 112, 172, .8);
-}
-
-.form-login button:hover {
+.slide{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
     cursor: pointer;
-    box-shadow: 0px 1px 10px 1px rgba(236, 104, 56, .6);
+    transition: all 0.6s ease;
 }
-
-.form-wrapper .content-wrapper p {
-    font-size: .7rem;
-    color: rgba(223, 214, 217, .6);
+.signup{
+    color: black;
 }
-
-.form-wrapper .content-wrapper a {
-    color: #FDF3F8;
+.slide-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 4px;
+    /* slide transition */
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: linear-gradient(to left,rgb(230, 117, 117), rgb(75, 75, 145));
+}
+input[type="radio"]{
+    display: none;
+}
+#signup:checked ~ .slide-tab{
+    left: 50%;
+}
+#signup:checked ~ .signup{
+    color: white;
+}
+#signup:checked ~ .login{
+    color: black;
+}
+.form-inner{
+    display: flex;
+    width: 200%;
+}
+form{
+    width: 50%;
+}
+.field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 3px;
+    transition: all 0.8s ease;
+}
+.input:focus{
+    border-color: aqua;
+}
+.signup-link{
+    margin-top: 30px;
+}
+.signup-link a{
     text-decoration: none;
+    color: lightblue;
 }
-
-#wrapper-signup {
-    opacity: 0;
-    pointer-events: none;
+.signup-link a:hover{
+    text-decoration: underline;
 }
-
-#wrapper-signup:target {
-    display: block;
-    opacity: 1;
-    pointer-events: all;
-}
-
-#wrapper-signup:target #wrapper-login,
-#wrapper-signin:target #wrapper-signup {
-    opacity: 0;
-    pointer-events: none;
-}
-
-#wrapper-signup,
-#wrapper-login {
-    transition: .2s linear all;
+input[type="submit"]{
+    background: linear-gradient(to left,rgb(230, 117, 117), rgb(75, 75, 145));
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 </style>
