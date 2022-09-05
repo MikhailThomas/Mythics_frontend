@@ -94,14 +94,14 @@ signupLink.onclick = (() =>{
 }
 .form-container{
 width: 100%;
-overflow: hidden;
+/* overflow: hidden; */
 }
 .slide-controls{
     position: relative;
     display: flex;
     height: 50px;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 5px;
     margin: 30px 0 10px 0;
     justify-content: space-between;

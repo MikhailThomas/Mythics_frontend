@@ -1,7 +1,6 @@
 <template>
     <div id="habitat" class="100vh">
         <h1>Habitats</h1>
-        <p>check which habitat matches your land and use the colored boarders as a reference when looking for a Pet.</p>
         <div class="gallery">
   <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
   <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
@@ -9,10 +8,6 @@
   <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
   <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
   <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
-  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
-  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
-  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
-
   <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
 </div>
     </div>
