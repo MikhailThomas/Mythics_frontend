@@ -67,16 +67,11 @@ h1 {
   margin: 2rem;
 }
 
-#search {
-
-}
-
 .wrapper {
   min-height: 100vh;
   max-width: 100%;
   margin: 2rem auto;
   max-width: 80vw;
-  z-index: 3;
 }
 
 #search{
@@ -149,7 +144,6 @@ img {
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: inherit;
-  z-index: 2;
 }
 
 .container .back {

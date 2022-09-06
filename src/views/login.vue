@@ -21,7 +21,7 @@
             <div class="form-inner">
                 <form action="#" class="login-form">
                     <div class="field">
-                        <input type="text" placeholder="Emailadress" required>
+                        <input type="text" placeholder="Emailaddress" required>
                     </div>
                     <div class="field">
                         <input type="text" placeholder="password" required>
@@ -29,12 +29,11 @@
                     <div class="field">
                         <input type="submit" value="login">
                     </div>
-                    <div class="signup-link">don't have an account?<a href="signup">signup now</a></div>
                 </form>
                 <!-- sign up -->
                 <form action="#" class="signup">
                     <div class="field">
-                        <input type="text" placeholder="Emailadress" required>
+                        <input type="text" placeholder="Emailaddress" required>
                     </div>
                     <div class="field">
                         <input type="text" placeholder="password" required>
@@ -45,7 +44,7 @@
                     <div class="field">
                         <input type="submit" value="signup">
                     </div>
-                    <div class="signup-link">don't have an account?<a href="signup">signup now</a></div>
+                    
                 </form>
             </div>
         </div>
@@ -68,10 +67,6 @@ loginBtn.onclick = (() =>{
     loginForm.style.marginLeft = "0%";
     loginText.style.marginLeft = "0%";
 });
-signupLink.onclick = (() =>{
-    signupBtn.click();
-    return false;
-});
 </script>
 
 <style scoped>
@@ -79,7 +74,9 @@ signupLink.onclick = (() =>{
     max-width: 400px;
     border-radius: 10px;
     border-radius: 0px 15px 20px rgba(0,0,0,0.1);
-    overflow: hidden;
+    /* overflow: hidden; */
+    margin: auto;
+    padding-top: 3em;
 }
 .title-text{
     display: flex;

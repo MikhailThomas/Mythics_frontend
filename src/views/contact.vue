@@ -73,7 +73,7 @@
               </div>                
               <div class="col-md-12 message-input">
                 <div class="single-input-field">
-                  <textarea  placeholder="Write Your Message" name="message"></textarea>
+                  <textarea class="text-center" placeholder="Write Your Message" name="message"></textarea>
                 </div>
               </div>                                                
               <div class="single-input-fieldsbtn">
@@ -95,24 +95,30 @@ export default {
 </script>
 
 <style scoped>
+  .contact-page-sec{
+    background: 
+     linear-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.919)), url(https://i.postimg.cc/xTgjMWXk/snow-landscape.jpg) center/cover no-repeat;
+     min-height: 100vh;
+  }
 .contact-info {
   display: inline-block;
   width: 100%;
   text-align: center;
       margin: 10px;
+      margin-top: 4rem;
+      box-shadow: 2px 2px 2px 2px;
 }
 .contact-info-icon {
 margin-bottom: 15px;
 }
 .contact-info-item {
-  background: #071c34;
+  background: #000000;
   padding: 30px 0px;
 }
 .contact-page-sec .contact-page-form h2 {
-  color: #071c34;
-  text-transform: capitalize;
   font-size: 22px;
   font-weight: 700;
+  color: #fff;
 }
 .contact-page-form .col-md-6.col-sm-6.col-xs-12 {
   padding-left: 0;
@@ -124,13 +130,10 @@ margin-bottom: 15px;
   height: 110px;
 }
 .contact-page-form.contact-form input[type="submit"] {
-  background: #071c34;
   width: 150px;
-  border-color: #071c34;
 }
 .contact-info-icon i {
   font-size: 48px;
-  color: #fda40b;
 }
 .contact-info-text p{margin-bottom:0px;}
 .contact-info-text h2 {
@@ -141,7 +144,7 @@ margin-bottom: 15px;
   margin-bottom: 10px;
 }
 .contact-info-text span {
-  color: #999999;
+  color: #ffffff;
   font-size: 16px;
   display: inline-block;
   width: 100%;
@@ -159,17 +162,17 @@ margin-bottom: 15px;
 .contact-page-form .message-input {
 display: inline-block;
 width: 100%;
+padding-left: 0;
 }
 .single-input-field textarea {
   background: #f9f9f9 none repeat scroll 0 0;
   border: 1px solid #f9f9f9;
   width: 100%;
   height: 120px;
-  padding: 12px 16px;
   border-radius: 4px;
 }
 .single-input-fieldsbtn input[type="submit"] {
-  background: #fda40b none repeat scroll 0 0;
+  background: #000000 none repeat scroll 0 0;
   color: #fff;
   display: inline-block;
   font-weight: 600;
@@ -179,9 +182,9 @@ width: 100%;
   margin-top: 20px;
   font-size: 16px;
 }
-.single-input-fieldsbtn input[type="submit"]:hover{background:#071c34;transition: all 0.4s ease-in-out 0s;border-color:#071c34}
+.single-input-fieldsbtn input[type="submit"]:hover{background:#ffffff;color:black; transition: all 0.4s ease-in-out 0s;border-color:rgb(0, 0, 0)}
 .single-input-field  h4 {
-  color: #464646;
+  color: #000000;
   text-transform: capitalize;
   font-size: 14px;
 }
@@ -191,6 +194,6 @@ width: 100%;
   margin-top: 30px;
 }
 .contact-page-form form {
-    padding: 20px 15px 0;
+  padding: 20px 15px 0;
 }
 </style>
