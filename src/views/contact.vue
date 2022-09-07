@@ -9,7 +9,7 @@
                 <i class="fas fa-map-marked"></i>
               </div>
               <div class="contact-info-text">
-                <h2>ADRESS</h2>
+                <h2>ADDRESS</h2>
                 <span>6 erf</span> 
                 <span>Dagger Stone, South Africa</span> 
               </div>

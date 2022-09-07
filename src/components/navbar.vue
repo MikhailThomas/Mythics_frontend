@@ -6,25 +6,25 @@
           </label>
       <ul class="menu__box">
         <li>
-            <a class="menu__item" href="/user"><img src="" alt="">img</a>
+            <router-link class="menu__item" to="/user"><img src="" alt="">img</router-link>
         </li>
         <li>
-            <a class="menu__item" href="/">Home</a>
+            <router-link class="menu__item" to="/">Home</router-link>
         </li>
         <li>
-            <a class="menu__item" href="/login">Login</a>
+            <router-link class="menu__item" to="/login">Login</router-link>
         </li>
             <li>
-                <a class="menu__item" href="/pets">Pets</a>
+                <router-link class="menu__item" to="/pets">Pets</router-link>
             </li>
             <li>
-                <a class="menu__item" href="/habitat">Habitats</a>
+                <router-link class="menu__item" to="/habitat">Habitats</router-link>
             </li>
         <li>
-            <a class="menu__item" href="/about">About</a>
+            <router-link class="menu__item" to="/about">About</router-link>
         </li>
             <li>
-                <a class="menu__item" href="/contact">Contact</a>
+                <router-link class="menu__item" to="/contact">Contact</router-link>
             </li>
     </ul>
   </div>
