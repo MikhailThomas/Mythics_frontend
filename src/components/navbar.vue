@@ -5,7 +5,7 @@
             <span></span>
           </label>
       <ul class="menu__box">
-        <li>
+        <li v-if="user">
             <router-link class="menu__item" to="/user"><img src="" alt="">img</router-link>
         </li>
         <li>
@@ -14,14 +14,17 @@
         <li>
             <router-link class="menu__item" to="/login">Login</router-link>
         </li>
-            <li>
+            <li v-if="user">
                 <router-link class="menu__item" to="/pets">Pets</router-link>
             </li>
-            <li>
+            <li v-if="user">
                 <router-link class="menu__item" to="/habitat">Habitats</router-link>
             </li>
         <li>
             <router-link class="menu__item" to="/about">About</router-link>
+        </li>
+        <li v-if="user">
+            <router-link v-if="user[0].userRole == 'admin'" class="menu__item" to="/admin">Admin</router-link>
         </li>
             <li>
                 <router-link class="menu__item" to="/contact">Contact</router-link>
@@ -31,6 +34,13 @@
 </template>
 
 <script>
+  export default{
+    computed:{
+      user(){
+        return this.$store.state.user
+      }
+    }
+  }
 
 </script>
 

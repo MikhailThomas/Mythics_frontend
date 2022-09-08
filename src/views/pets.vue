@@ -3,48 +3,69 @@
     <!-- filter -->
     <h1>Pets looking for new homes</h1>
     <div class="dropdown">
-  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Filter
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-  <!-- sort -->
-  <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Sort
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-</div>
-      <!-- search -->
+      <button
+        class="btn dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="true"
+      >
+        Filter
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+      <!-- sort -->
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Sort
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </div>
+    <!-- search -->
     <form id="search" class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </form>
+    <!-- cards -->
     <div class="row">
-      <div class="col-4" ontouchstart="this.classList.toggle('hover');">
+      <div v-for="(monsters, index) in monsters" :key="index" class="col-4" ontouchstart="this.classList.toggle('hover');">
         <div class="container">
           <div
             class="front"
-            style="background-image: url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg/500/500/)"
+            style="
+              background-image: url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg/500/500/);
+            "
           >
             <div class="inner">
-              <p>Diligord</p>
-              <span>Lorem ipsum</span>
+              <p>monster.name</p>
+              <span>monster.family</span>
             </div>
             <img src="../assets/Tony_dragon-removebg-preview.png" alt="" />
           </div>
           <div class="back">
             <div class="inner">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
-                cum repellat.
+                monster.smalldescription
               </p>
               <button id="btn" class="custom-btn">More Info</button>
             </div>
@@ -52,11 +73,35 @@
         </div>
       </div>
     </div>
+    <div
+      class="row d-flex justify-content-evenly"  
+    >
+      <div class="card" style="width: 18rem" v-for="(monster, index) in monsters"
+      :key="index">
+        <img :src="monster.img" class="card-img-top" :alt="monster.species" />
+        <div class="card-body">
+          <h5 class="card-title">monster.species</h5>
+          <p class="card-text">
+            {{monster.description}}
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    monsters() {
+      return this.$store.state.monsters;
+    },
+  },
+  mounted() {
+    this.$store.dispatch('fetchMonsters');
+  },
+};
 </script>
 
 <style scoped>
@@ -74,7 +119,7 @@ h1 {
   max-width: 80vw;
 }
 
-#search{
+#search {
   margin: 3rem;
 }
 
@@ -160,7 +205,7 @@ img {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
-#btn{
+#btn {
   width: 130px;
   height: 40px;
   color: white;
@@ -173,23 +218,25 @@ img {
   position: relative;
   display: inline-block;
   box-shadow: inset 2px 2px 2px 0px rgba(176, 176, 176, 0.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-#btn{
+#btn {
   border: none;
-  background: linear-gradient(0deg,rgb(203, 203, 203) 0%,
-  rgb(150, 141, 141)100%);
+  background: linear-gradient(
+    0deg,
+    rgb(203, 203, 203) 0%,
+    rgb(150, 141, 141) 100%
+  );
   color: white;
   overflow: hidden;
 }
-#btn:hover{
+#btn:hover {
   color: #fff;
 }
-#btn:before{
+#btn:before {
   position: absolute;
-  content: '';
+  content: "";
   display: inline-block;
   top: -180px;
   left: 0;
@@ -197,22 +244,33 @@ img {
   height: 100%;
   background: #fff;
   animation: shiny-btn 3s ease-in-out infinite;
-
 }
-#btn:hover{
-  opacity: .7;
+#btn:hover {
+  opacity: 0.7;
 }
-#btn:active{
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+#btn:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 @keyframes shiny-btn {
-    0% { transform: scale(0) rotate(45deg); opacity: 0; }
-    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
-    81% { transform: scale(4) rotate(45deg); opacity: 1; }
-    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
 }
 .container:hover .front {
   transform: rotateY(-180deg);

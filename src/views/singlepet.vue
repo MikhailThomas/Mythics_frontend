@@ -2,31 +2,39 @@
   <div id="page">
     <div id="content" class="row">
       <div id="monster"
-            class="front col-6"
+            class="col-lg-6"
             style="background-image: url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg/500/500/)"
           >
             <img src="../assets/Tony_dragon-removebg-preview.png" alt=""/>
           </div>
-      <div class="col-6">
-      <h2>pet information</h2>
-      <p>Hela info</p>
+      <div class="col-lg-6">
+      <h2>More information on monster.name</h2>
+      <p>monster.description</p>
     </div>
     <div id="info" class="row">
       <div class="col-2">
-        <h3>name</h3>
+        <h3>Name:</h3>
+        <p>monster.name</p>
         <h3>species</h3>
+        <p>monster.species</p>
+      </div>
+      <div class="col-2">
+        <h3>height</h3>
+        <p>monster.height</p>
+        <h3>length</h3>
+        <p>monster.length</p>
       </div>
       <div class="col-2">
         <h3>family</h3>
-        <h3>height</h3>
-      </div>
-      <div class="col-2">
-        <h3>length</h3>
+        <p>monster.family</p>
         <h3>difficulty to raise</h3>
+        <p>monter.difficulty</p>
       </div>
       <div class="col-2">
         <h3>habitats</h3>
-        <h3>how long it will take to deliver the beast that is your mom</h3>
+        monster.habitats
+        <h3>how long </h3>
+        <p>monster.delivery</p>
       </div>
     </div>
     </div>
@@ -60,6 +68,9 @@ img {
 #info{
   margin-top: 2rem;
 }
+.row{
+  --bs-gutter-x: 0rem;
+}
 h3{
   margin-top: 2rem;
 }
@@ -67,10 +78,10 @@ h3{
   margin-top: 1rem;
 }
 .col-2{
-  margin-top: 2rem;
+  margin: auto;
+  margin-top: 1rem;
   background: rgba(0, 0, 0, 0.456);
   border-radius: 10%;
-  margin: auto;
   height: 15em;
   width: 15em;
 }
