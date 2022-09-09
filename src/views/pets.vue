@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrap">
     <!-- filter -->
     <h1>Pets looking for new homes</h1>
     <div class="dropdown">
@@ -47,78 +47,45 @@
       />
     </form>
     <!-- cards -->
-    <div class="row">
-      <div v-for="(monsters, index) in monsters" :key="index" class="col-4" ontouchstart="this.classList.toggle('hover');">
-        <div class="container">
-          <div
-            class="front"
-            style="
-              background-image: url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg/500/500/);
-            "
-          >
-            <div class="inner">
-              <p>monster.name</p>
-              <span>monster.family</span>
-            </div>
-            <img src="../assets/Tony_dragon-removebg-preview.png" alt="" />
-          </div>
-          <div class="back">
-            <div class="inner">
-              <p>
-                monster.smalldescription
-              </p>
-              <button id="btn" class="custom-btn">More Info</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div
-      class="row d-flex justify-content-evenly"  
-    >
-      <div class="card" style="width: 18rem" v-for="(monster, index) in monsters"
-      :key="index">
-        <img :src="monster.img" class="card-img-top" :alt="monster.species" />
-        <div class="card-body">
-          <h5 class="card-title">monster.species</h5>
-          <p class="card-text">
-            {{monster.description}}
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+      class="row d-flex justify-content-evenly" v-if="monsters">
+      <Card v-for="monster in monsters" :key="monster" :monster="monster"/>
     </div>
   </div>
 </template>
 
 <script>
+import Card from '@/components/card.vue';
 export default {
-  computed: {
-    monsters() {
-      return this.$store.state.monsters;
+    computed: {
+        monsters() {
+            return this.$store.state.monsters;
+        },
     },
-  },
-  mounted() {
-    this.$store.dispatch('fetchMonsters');
-  },
+    mounted() {
+        this.$store.dispatch("getMonsters");
+    },
+    components: { Card }
 };
 </script>
 
 <style scoped>
-h1 {
-  font-size: 2.5rem;
-  font-weight: normal;
-  text-align: center;
-  margin: 2rem;
-}
+  
+  .wrap {
+    background: linear-gradient(rgba(0, 0, 0, 0.278),rgba(0, 128, 0, 0.355)), url(https://i.postimg.cc/2j7CNPFH/forest-landscape.jpg)center/cover no-repeat;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 2rem auto;
+    max-width: 80vw;
+  }
 
-.wrapper {
-  min-height: 100vh;
-  max-width: 100%;
-  margin: 2rem auto;
-  max-width: 80vw;
-}
-
+  h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 2rem;
+  }
+  
 #search {
   margin: 3rem;
 }

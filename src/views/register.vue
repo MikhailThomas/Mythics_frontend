@@ -1,58 +1,64 @@
 <template>
-  <div class="box">
+    <div class="box">
     <div class="title-text">
-    <div class="form-container">
-      <div class="slide-controls">
-        <input type="radio" name="slider" id="login" checked />
-        <label for="login" class="slide login">Login</label>
-        <div class="slide-tab"></div>
-      </div>
-      <div class="form-inner">
-        <form class="login-form">
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slider" id="login" checked />
+                <label for="signup" class="slide login">Signup</label>
+                <div class="slide-tab"></div>
+            </div>
+            <form action="#" class="signup">
+                <div class="field">
+                    <input type="text" placeholder="name" v-model="name" required />
+          </div>
           <div class="field">
-            <input type="text" placeholder="email" v-model="email" required />
+            <input type="text" placeholder="surname" v-model="surname" required />
+          </div>
+          <div class="field">
+            <input type="text" placeholder="emaill" v-model="email" required />
           </div>
           <div class="field">
             <input type="text" placeholder="password" v-model="password" required />
           </div>
           <div class="field">
-            <button type="button" value="login" @click="login()" >ping</button>
+            <input type="text" placeholder="confirm password" v-model="password" required />
           </div>
-        </form>       
-      </div>
+          <div class="field">
+            <button type="button" class="btn btn-primary" value="signup" @click="register()">Sign UP</button>
+          </div>
+        </form>
     </div>
-  </div>
-  </div>
+</div>
+</div>
 </template>
 
 <script>
-
-
 export default {
-  data() {
+    data() {
     return {
+      name: "",
+      surname:"",
       email: "",
-      password: ""
+      password: "",
     };
   },
-  methods: {
-    logout() {
-      this.$store.commit("Logout");
-      console.log("byeeeee");
-    },
-    login() {
-      const user = {
-        email: this.email,
-        password: this.password,
-      };
-      this.$store.dispatch("login", user);
-    },
+  methods:{
+    register(){
+        const user = {
+            name: this.name,
+            surname: this.surname,
+            email: this.email,
+            password: this.password
+        }
+        this.$store.dispatch("register", user);
+    }
+  }
     
-  },
-};
+
+}
 </script>
 
-<style scoped>
+<style>
 .box {
   max-width: 400px;
   border-radius: 10px;
@@ -65,7 +71,7 @@ export default {
   display: flex;
 }
 .title {
-  width: 50%;
+  width: 100%;
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -117,7 +123,7 @@ input[type="radio"] {
   width: 200%;
 }
 form {
-  width: 50%;
+  width: 100%;
 }
 .field {
   height: 50px;

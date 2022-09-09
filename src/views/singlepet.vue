@@ -2,39 +2,39 @@
   <div id="page">
     <div id="content" class="row">
       <div id="monster"
-            class="col-lg-6"
+            class="col-lg-6 " v-if="monster"
             style="background-image: url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg/500/500/)"
           >
-            <img src="../assets/Tony_dragon-removebg-preview.png" alt=""/>
+            <img :src="monster[0].img" alt="pet"/>
           </div>
       <div class="col-lg-6">
       <h2>More information on monster.name</h2>
-      <p>monster.description</p>
+      <p>{{monster[0].description}}</p>
     </div>
     <div id="info" class="row">
       <div class="col-2">
         <h3>Name:</h3>
-        <p>monster.name</p>
+        <p>{{monster[0].name}}</p>
         <h3>species</h3>
-        <p>monster.species</p>
+        <p>{{monster[0].species}}</p>
       </div>
       <div class="col-2">
         <h3>height</h3>
-        <p>monster.height</p>
+        <p>{{monster[0].height}}</p>
         <h3>length</h3>
-        <p>monster.length</p>
+        <p>{{monster[0].length}}</p>
       </div>
       <div class="col-2">
         <h3>family</h3>
-        <p>monster.family</p>
+        <p>{{monster[0].family}}</p>
         <h3>difficulty to raise</h3>
-        <p>monter.difficulty</p>
+        <p>{{monter[0].difficulty}}</p>
       </div>
       <div class="col-2">
         <h3>habitats</h3>
-        monster.habitats
+        <p>{{monster[0].habitats}}</p>
         <h3>how long </h3>
-        <p>monster.delivery</p>
+        <p>{{monster[0].delivery}}</p>
       </div>
     </div>
     </div>
@@ -42,7 +42,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted(){
+    this.$store.dispatch("getMonster", this.$route.params.id);
+  },
+  computed:{
+    monster(){
+      return this.$store.state.monster;
+    },
+    user(){
+      return this.$store.state.user
+    }
+  }
+
+};
 </script>
 
 <style scoped>

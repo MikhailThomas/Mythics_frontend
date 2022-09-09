@@ -32,14 +32,25 @@ const routes = [
     component: () => import('../views/about.vue')
   },
   {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('../views/admin.vue')
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('../views/login.vue')
   },
   {
-    path: '/singlepet',
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/register.vue')
+  },
+  {
+    path: '/singlepet/:id',
     name: 'singlepet',
-    component: () => import('../views/singlepet.vue')
+    component: () => import('../views/singlepet.vue'),
+    props: true
   },
   {
     path: '/contact',

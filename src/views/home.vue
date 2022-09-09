@@ -9,10 +9,10 @@
         <h2 class="frame-4"></h2>
         <h2 class="frame-5"><span>MYTHICS SANCTUARY</span></h2>
         <p class="frame-6">we are here to</p>
-  <div class="button frame-7" id="frame-7">
+  <!-- <div class="button frame-7" id="frame-7">
     <div id="dub-arrow"><i class="bi bi-book fs-4"></i></div>
     <a href="/about">Read More</a>
-  </div>
+  </div> -->
       </div>
     </div>
   </div>

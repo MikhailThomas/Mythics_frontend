@@ -49,7 +49,7 @@
         <div class="col-md-12">
           <div class="contact-page-form" method="post">
             <h2>Get in Touch</h2> 
-            <form action="contact-mail.php" method="post">
+            <form action="https://formspree.io/f/mbjbdpkp" method="POST">
               <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="single-input-field">
@@ -75,7 +75,7 @@
                 <div class="single-input-field">
                   <textarea class="text-center" placeholder="Write Your Message" name="message"></textarea>
                 </div>
-              </div>                                                
+              </div>          
               <div class="single-input-fieldsbtn">
                 <input type="submit" value="Send Now"/>
               </div>                          
