@@ -1,26 +1,27 @@
 <template>
   <div class="wrap">
-  <div class="row">
-      <div class="col-4" ontouchstart="this.classList.toggle('hover');">
-        <div class="container">
-          <img class="front" :src="monster.habitatimg" alt="habitat" />
-            <div class="inner">
-              <p>{{monster.name}}</p>
-              <p>{{monster.species}}</p>
-              <span>{{monster.family}}</span>
-            </div>
-            <img :src="monster.img" alt="monster" />
+      <!-- things -->
+      <div
+      class="row"
+    >
+      <div id="card" style="width: 18rem" class="col-lg-4" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" style="background-image: url(monster.habitatimg);" >
+  <div class="inner">
+    <p>{{monster.name}}</p>
+    <span>{{monster.family}}</span>
+  </div>
+  <img :src="monster.img" class="card-img-top" :alt="monster.species" />
+      </div>
+        <div class="back">
+          <div class="inner">
+            <p>{{monster.smalldescription}}</p>
           </div>
-          <div class="back">
-            <div class="inner">
-              <p>
-                {{monster.smallinfo}}
-              </p>
-              <router-link class="btn" :to="{name:'singlepet', params: {id: monster.monsterID}}"><button id="btn" class="custom-btn" >More Info</button></router-link>
-            </div>
-          </div>
+          <router-link class="btn" :to="{name:'singlepet', params: {id: monster.monsterID}}"><button id="btn" class="custom-btn" >More Info</button></router-link>
+        </div>
         </div>
       </div>
+    </div>
     </div>
    
 </template>
