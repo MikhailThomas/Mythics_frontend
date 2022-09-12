@@ -2,12 +2,12 @@
     <div id="habitat" class="100vh">
         <h2>HOVER</h2>
         <div class="gallery">
-          <div class="hexa"><img id="img1" src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain"></div>
-          <div class="hexa"><img id="img2" src="https://picsum.photos/id/106/300/300" alt="sime pink flowers"></div>
-          <div class="hexa"><img id="img3" src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees"></div>
-          <div class="hexa"><img id="img4" src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky"></div>
-          <div class="hexa"><img id="img5" src="https://picsum.photos/id/110/300/300" alt="a cool landscape"></div>
-          <div class="hexa"><img id="img6" src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings"></div>
+          <div class="hexa"><img id="img1" src="https://i.postimg.cc/25WfcJS7/aquatic-landscape.jpg" alt="aquatic landscape"></div>
+          <div class="hexa"><img id="img2" src="https://i.postimg.cc/2j7CNPFH/forest-landscape.jpg" alt="forrest landscape"></div>
+          <div class="hexa"><img id="img3" src="https://i.postimg.cc/2yrmBwmF/grassland-landscape.jpg" alt="grassland landscape"></div>
+          <div class="hexa"><img id="img4" src="https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg" alt="mountain landscape"></div>
+          <div class="hexa"><img id="img5" src="https://i.postimg.cc/xTgjMWXk/snow-landscape.jpg" alt="snow landscape"></div>
+          <div class="hexa"><img id="img6" src="https://i.postimg.cc/3RtnN3zr/desert-landscape.jpg" alt="dessert landscape"></div>
           <div class="center"><a id="all" href="#allhabitats"><h1>HABITATS</h1></a>
           </div>
 </div>
@@ -23,22 +23,31 @@ export default {
 <style scoped>
   #habitat{
     background: linear-gradient(rgba(108, 152, 157, 0.493),rgb(0, 0, 0)), url(https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg) center / cover no-repeat;
-    height: 100vh;
-    overflow-y: hidden;
+    min-height: 100vh;
+    padding-top: 4rem;
   }
   #all{
     color: yellow;
     font-weight: 700;
     text-decoration-line: none;
+    
   }
 .gallery {
   display: grid;
-  margin: 230px  10px;
   place-items: center;
+  justify-content: center;
+  margin: 10rem auto;
 }
 
 .center{
   position: absolute;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hexa{
@@ -55,7 +64,7 @@ export default {
 .hexa:hover {
   filter: grayscale(0);
   z-index: 1;
-  --_t: 1.2;
+  --_t: 1.3;
 }
 
 .hexa:nth-child(1) {--_a:  0deg}

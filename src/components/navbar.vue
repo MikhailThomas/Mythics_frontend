@@ -1,36 +1,41 @@
 <template>
-  <div id="nav">
-      <input id="menu__toggle" type="checkbox" />
-          <label class="menu__btn" for="menu__toggle">
-            <span></span>
-          </label>
-      <ul class="menu__box">
-        <li v-if="user">
-            <router-link class="menu__item" to="/user"><img src="" alt="">img</router-link>
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <router-link class="navbar-brand" to="/">Mythics Sanctuary</router-link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSup" aria-controls="navbarSup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSup">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
         </li>
-        <li>
-            <router-link class="menu__item" to="/">Home</router-link>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/about
+          ">About</router-link>
         </li>
-        <li>
-            <router-link class="menu__item" to="/login">Login</router-link>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/pets">Creatures</router-link>
         </li>
-            <li v-if="user">
-                <router-link class="menu__item" to="/pets">Pets</router-link>
-            </li>
-            <li v-if="user">
-                <router-link class="menu__item" to="/habitat">Habitats</router-link>
-            </li>
-        <li>
-            <router-link class="menu__item" to="/about">About</router-link>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/habitat">Habitats</router-link>
         </li>
-        <li v-if="user">
-            <router-link v-if="user[0].userRole == 'admin'" class="menu__item" to="/admin">Admin</router-link>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/login">Login</router-link>
         </li>
-            <li>
-                <router-link class="menu__item" to="/contact">Contact</router-link>
-            </li>
-    </ul>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/register">Register</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/admin">Admin</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/user">User Page</router-link>
+        </li>
+      </ul>
+    </div>
   </div>
+</nav>
 </template>
 
 <script>
@@ -45,73 +50,29 @@
 </script>
 
 <style scoped>
-#nav{
-  height: 0;
-}
-#menu__toggle {
-  opacity: 0;
-}
-#menu__toggle:checked + .menu__btn > span {
-  transform: rotate(45deg);
-}
-#menu__toggle:checked + .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0deg);
-}
-#menu__toggle:checked + .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
-.menu__btn {
+.navbar{
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
   position: fixed;
-  top: 5%;
-  left: 20px;
-  width: 26px;
-  cursor: pointer;
-  z-index: 99;
+  width: 100vw;
 }
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  transition-duration: 0.25s;
-  z-index: 999;
+.nav-link, .navbar-brand{
+  color: white;
 }
-.menu__btn > span::before {
-  content: "";
-  top: -8px;
+.navbar-toggler-icon{
+  color: white;
+  background-image: url(https://i.postimg.cc/kg8wZhBY/button-removebg-preview-1.png);
+  animation: rotation 4s infinite linear;
 }
-.menu__btn > span::after {
-  content: "";
-  top: 8px;
+
+@keyframes rotation{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
-.menu__box {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-  transition-duration: 0.5s;
-}
-.menu__item {
-    display: block;
-  padding: 12px;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: 0.25s;
-}
+
 </style>

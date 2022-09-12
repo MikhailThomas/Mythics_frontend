@@ -4,7 +4,7 @@
         <div class="form-container">
             <div class="slide-controls">
                 <input type="radio" name="slider" id="login" checked />
-                <label for="signup" class="slide login">Signup</label>
+                <label for="signup" class="slide login">Register</label>
                 <div class="slide-tab"></div>
             </div>
             <form action="#" class="signup">
@@ -24,7 +24,7 @@
             <input type="text" placeholder="confirm password" v-model="password" required />
           </div>
           <div class="field">
-            <button type="button" class="btn btn-primary" value="signup" @click="register()">Sign UP</button>
+            <button id="button" type="button" class="btn btn-primary" value="signup" @click="register()">Register</button>
           </div>
         </form>
     </div>
@@ -60,33 +60,29 @@ export default {
 
 <style>
 .box {
-  max-width: 400px;
-  border-radius: 10px;
-  border-radius: 0px 15px 20px rgba(0, 0, 0, 0.1);
-  /* overflow: hidden; */
+  min-height: 100vh;
+  background: linear-gradient(black,black);display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.form-container{
   margin: auto;
   padding-top: 3em;
-}
-.title-text {
-  display: flex;
+  min-width: 300px;
+  border-radius: 10px;
+  border-radius: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
 .title {
-  width: 100%;
+  width: 50%;
   font-size: 25px;
   font-weight: 400;
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.form-container {
-  width: 100%;
-  /* overflow: hidden; */
 }
 .slide-controls {
   position: relative;
   display: flex;
   height: 50px;
   width: 100%;
-  /* overflow: hidden; */
   border-radius: 5px;
   margin: 30px 0 10px 0;
   justify-content: space-between;
@@ -101,18 +97,11 @@ export default {
   font-weight: 500;
   text-align: center;
   line-height: 40px;
-  cursor: pointer;
-  transition: all 0.6s ease;
 }
 .slide-tab {
   position: absolute;
   height: 100%;
   width: 100%;
-  left: 0;
-  z-index: 0;
-  border-radius: 4px;
-  /* slide transition */
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   background: linear-gradient(to left, rgb(230, 117, 117), rgb(75, 75, 145));
 }
 input[type="radio"] {
@@ -120,20 +109,18 @@ input[type="radio"] {
 }
 .form-inner {
   display: flex;
-  width: 200%;
+  width: 100%;
 }
 form {
   width: 100%;
 }
 .field {
   height: 50px;
-  width: 100%;
   margin-top: 20px;
 }
 .field input {
   height: 100%;
   width: 100%;
-  outline: none;
   padding-left: 15px;
   font-size: 17px;
   border-radius: 5px;
@@ -151,5 +138,13 @@ input[type="submit"] {
   font-weight: 600;
   border: none;
   cursor: pointer;
+}
+#button{
+  min-width: 100px;
+  border-radius: 10px;
+  background: linear-gradient(to left, rgb(230, 117, 117), rgb(75, 75, 145));
+  color: rgb(255, 255, 255);
+  height: 3rem;
+  border: 2px solid lightblue;
 }
 </style>

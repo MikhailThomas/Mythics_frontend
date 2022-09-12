@@ -2,43 +2,43 @@
   <div class="wrap">
     <!-- filter -->
     <h1>Pets looking for new homes</h1>
+    <div class="row">
     <div class="dropdown">
       <button
-        class="btn dropdown-toggle"
+        class="btn dropdown-toggle col-6"
         type="button"
-        id="dropdownMenuButton"
+        id="drop"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="true"
       >
         Filter
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu" aria-labelledby="drop">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
       </div>
       <!-- sort -->
-      <div class="dropdown">
         <button
-          class="btn btn-secondary dropdown-toggle"
+          class="btn btn-secondary dropdown-toggle col-4"
           type="button"
-          id="dropdownMenuButton"
+          id="drop"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
         >
           Sort
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu" aria-labelledby="drop">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </div>
+    </div>
     </div>
     <!-- search -->
-    <form id="search" class="d-flex" role="search">
+    <form id="search" class="" role="search">
       <input
         class="form-control me-2"
         type="search"
@@ -51,6 +51,7 @@
       class="row d-flex justify-content-evenly" v-if="monsters">
       <Card v-for="monster in monsters" :key="monster" :monster="monster"/>
     </div>
+    
   </div>
 </template>
 
@@ -74,37 +75,45 @@ export default {
   .wrap {
     background: linear-gradient(rgba(0, 0, 0, 0.278),rgba(0, 128, 0, 0.355)), url(https://i.postimg.cc/2j7CNPFH/forest-landscape.jpg)center/cover no-repeat;
     min-height: 100vh;
-    max-width: 100%;
-    margin: 2rem auto;
-    max-width: 80vw;
+    max-width: 100vw;
+   padding-top: 4rem;
   }
 
   h1 {
     font-size: 2.5rem;
-    font-weight: normal;
-    text-align: center;
-    margin: 2rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
   
-#search {
-  margin: 3rem;
+#drop{
+  max-width: 400px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+#search {
+  margin: 1rem auto;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  box-shadow: 2px 2px 2px;
+  border-radius: 10px;
 }
 
 .container {
   transform-style: preserve-3d;
 }
 
+.row{
+  margin: 0;
+}
+
 img {
   width: 100%;
   transform: translateZ(30px) scale(1.2);
 }
-
+.dropdown{
+  display: flex;
+  justify-content: space-evenly;
+}
 .front,
 .back {
   background-size: cover;

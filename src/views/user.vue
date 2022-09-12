@@ -28,7 +28,7 @@ export default {
 <style scoped>
 #page{
     min-height: 100vh;
-    background: linear-gradient(rgba(1, 208, 255, 0.533),black),url(https://i.postimg.cc/Nfg0Qmht/aquatic-landscape2.jpg) center/cover;
+    background: linear-gradient(rgba(179, 179, 179, 0.533),black),url(https://i.postimg.cc/3RtnN3zr/desert-landscape.jpg) center/cover;
     display: flex;
     justify-content: center;
   }

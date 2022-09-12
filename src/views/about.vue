@@ -1,5 +1,5 @@
 <template>
-    <section id="section1" class="">
+    <section id="section" class="">
         <div id="info">
             <h1>About Us</h1>
             <p>Mythics Sanctuary has One enormous Sanctuary across three provinces in Southern Africa. The Sanctuary started in the year after the red eclipse,we grew from five Monsters to 12 and now we look for suitable homes for the varius monstes. These monsters have been domesticated through positive reinforcement animal management principles, and as a result, provide us with the unique opportunity to interact with them.
@@ -12,7 +12,7 @@ The monsters Sanctuary offers experiences/tours/programs monthly. The sanctuary 
     </section>
 </template>
 <style scoped>
-#section1{
+#section{
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.549),rgba(60, 60, 60, 0.66)),url(https://i.postimg.cc/c4WpDYR4/Landing.jpg) center / cover no-repeat;
     display: flex;

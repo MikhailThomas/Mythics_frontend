@@ -3,16 +3,9 @@
     <div class="sp-container">
       <div class="sp-content">
         <div class="sp-globe"></div>
-        <h2 class="frame-1"></h2>
-        <h2 class="frame-2"></h2>
-        <h2 class="frame-3">WELCOME TO...</h2>
-        <h2 class="frame-4"></h2>
-        <h2 class="frame-5"><span>MYTHICS SANCTUARY</span></h2>
-        <p class="frame-6">we are here to</p>
-  <!-- <div class="button frame-7" id="frame-7">
-    <div id="dub-arrow"><i class="bi bi-book fs-4"></i></div>
-    <a href="/about">Read More</a>
-  </div> -->
+        <h2 class="frame-1">WELCOME TO...</h2>
+        <h1 class="frame-2"><span>MYTHICS SANCTUARY</span></h1>
+        <p class="frame-3">we are here to</p>
       </div>
     </div>
   </div>
@@ -44,51 +37,35 @@ export default {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	left: 0px;
-	top: 0px;
 }
-.sp-container h2 {
+h2, h1 {
 	position: absolute;
 	top: 50%;
-	line-height: 100px;
 	height: 90px;
 	margin-top: -50px;
-	font-size: 90px;
 	width: 100%;
+	font-weight: 700;
 	text-align: center;
 	color: transparent;
 	animation: blurFadeInOut 3s ease-in backwards;
 }
-.sp-container h2.frame-1 {
+.frame-1 {
 	animation-delay: 0s;
 }
-.sp-container h2.frame-2 {
-	animation-delay: 0s;
-}
-.sp-container h2.frame-3 {
-	animation-delay: 0s;
-}
-.sp-container h2.frame-4 {
-	animation-delay: s;
-}
-.sp-container h2.frame-5 {
+.frame-2 {
 	animation: none;
 	color: transparent;
 	text-shadow: 0px 0px 1px #fff;
 }
-.sp-container h2.frame-5 span {
+.frame-2 span {
 	animation: blurFadeIn 3s ease-in 3s backwards;
   color: lightblue;
 	text-shadow: 0px 0px 1px #fff;
 }
-.sp-container p.frame-6 {
+.frame-3 {
 	text-shadow: 0px 0px 1px #fff;
   animation: blurFadeIn 2s ease-in 4s backwards;
-  padding-top: 3rem;
-}
-.sp-container div.frame-7 {
-	text-shadow: 0px 0px 1px #fff;
-  animation: blurFadeIn 2s ease-in 5s backwards;
+  padding-top: 4rem;
 }
 .sp-globe {
 	position: absolute;
@@ -203,19 +180,6 @@ a {
   text-decoration: none;
   letter-spacing: 1px;
 }
-
-#frame-7 {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-#frame-7 a {
-  position: relative;
-  left: 0;
-  transition: all .35s ease-Out;
-}
-
 #dub-arrow {
   width: 100%;
   height: 100%;
@@ -228,28 +192,5 @@ a {
   justify-content: center;
   transition: all .35s ease-Out;
   bottom: 0;
-}
-
-#frame-7 i {
-  width: 20px;
-  height: auto;
-  color: black;
-}
-
-#frame-7:hover #dub-arrow {
-  left: 0;
-}
-
-#frame-7:hover a {
-  left: 150px;
-}
-
-@media screen and (min-width:1000px) {
-  h1 {
-    font-size: 2.2em;
-  }
-  #container {
-    width: 50%;
-  }
 }
 </style>

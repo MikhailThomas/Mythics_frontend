@@ -1,9 +1,4 @@
 <template>
-  <div class="wrap">
-      <!-- things -->
-      <div
-      class="row"
-    >
       <div id="card" style="width: 18rem" class="col-lg-4" ontouchstart="this.classList.toggle('hover');">
     <div class="container">
       <div class="front" style="background-image: url(monster.habitatimg);" >
@@ -21,9 +16,6 @@
         </div>
         </div>
       </div>
-    </div>
-    </div>
-   
 </template>
 
 <script>
@@ -40,16 +32,7 @@ export default {
     text-align: center;
     margin: 2rem;
   }
-  
-#search {
-  margin: 3rem;
-}
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 .container {
   transform-style: preserve-3d;
@@ -81,7 +64,6 @@ img {
 .front:after {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   content: "";
