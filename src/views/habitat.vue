@@ -2,12 +2,19 @@
     <div id="habitat" class="100vh">
         <h2>HOVER</h2>
         <div class="gallery">
-          <div class="hexa"><img id="img1" src="https://i.postimg.cc/25WfcJS7/aquatic-landscape.jpg" alt="aquatic landscape"></div>
-          <div class="hexa"><img id="img2" src="https://i.postimg.cc/2j7CNPFH/forest-landscape.jpg" alt="forrest landscape"></div>
-          <div class="hexa"><img id="img3" src="https://i.postimg.cc/2yrmBwmF/grassland-landscape.jpg" alt="grassland landscape"></div>
-          <div class="hexa"><img id="img4" src="https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg" alt="mountain landscape"></div>
-          <div class="hexa"><img id="img5" src="https://i.postimg.cc/xTgjMWXk/snow-landscape.jpg" alt="snow landscape"></div>
-          <div class="hexa"><img id="img6" src="https://i.postimg.cc/3RtnN3zr/desert-landscape.jpg" alt="dessert landscape"></div>
+
+          <div class="hexa"><a href=""><img id="img1" src="https://i.postimg.cc/25WfcJS7/aquatic-landscape.jpg" alt="aquatic landscape"></a></div>
+
+          <div class="hexa"><a href=""><img id="img2" src="https://i.postimg.cc/2j7CNPFH/forest-landscape.jpg" alt="forrest landscape"></a></div>
+
+          <div class="hexa"><a href=""><img id="img3" src="https://i.postimg.cc/2yrmBwmF/grassland-landscape.jpg" alt="grassland landscape"></a></div>
+
+          <div class="hexa"><a href=""><img id="img4" src="https://i.postimg.cc/SNKbFjKs/Mountain-landscape.jpg" alt="mountain landscape"></a></div>
+
+          <div class="hexa"><a href=""><img id="img5" src="https://i.postimg.cc/xTgjMWXk/snow-landscape.jpg" alt="snow landscape"></a></div>
+
+          <div class="hexa"><a href=""><img id="img6" src="https://i.postimg.cc/3RtnN3zr/desert-landscape.jpg" alt="dessert landscape"></a></div>
+
           <div class="center"><a id="all" href="#allhabitats"><h1>HABITATS</h1></a>
           </div>
 </div>

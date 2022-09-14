@@ -1,6 +1,7 @@
 <template>
     <div class="admin">
       <div class="container pt-5">
+        <h1>USERS</h1>
           <div class="table-responsive">
         <table class="table">
           <tr>
@@ -45,6 +46,7 @@
         </table>
         </div>
         <br />
+        <h1>Monsters</h1>
         <div class="table-responsive">
           <table class="table table-white table-hover">
             <thead>
@@ -141,12 +143,11 @@ import Editmonster from '@/components/editmonster.vue';
   <style scoped>
   
   .admin{
-    background-color: #C37935;
-    color: white;
-    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.56), black), url(https://i.postimg.cc/2yrmBwmF/grassland-landscape.jpg) center/ cover no-repeat;
+    background-attachment: fixed;
   }
   
-  .table__heading { border-bottom: 2px solid  #C37935; }
+  .table__heading { border-bottom: 2px solid  #3591c3; }
    @media (max-width: 800px) {
    .table__heading {
   display: none;
@@ -202,6 +203,8 @@ import Editmonster from '@/components/editmonster.vue';
       border: 1px solid black;
   }
   
-  
+  h1{
+    color: white;
+  }
   
   </style>

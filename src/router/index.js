@@ -53,6 +53,12 @@ const routes = [
     props: true
   },
   {
+    path: '/singlehabitat',
+    name: 'singlehabitat',
+    component: () => import('../views/singlehabitat.vue'),
+    props: true
+  },
+  {
     path: '/contact',
     name: 'contact',
     component: () => import('../views/contact.vue')

@@ -5,7 +5,9 @@
         <div class="sp-globe"></div>
         <h2 class="frame-1">WELCOME TO...</h2>
         <h1 class="frame-2"><span>MYTHICS SANCTUARY</span></h1>
-        <p class="frame-3">we are here to</p>
+		<div id="para">
+        <p class="frame-3">We are here to rescue and rehabilitate injured monsters found in the wild. We try our best to find safe homes so they can live their best life in peace.</p>
+		</div>
       </div>
     </div>
   </div>
@@ -44,11 +46,12 @@ h2, h1 {
 	height: 90px;
 	margin-top: -50px;
 	width: 100%;
-	font-weight: 700;
+	font-weight: 800;
 	text-align: center;
 	color: transparent;
 	animation: blurFadeInOut 3s ease-in backwards;
 }
+
 .frame-1 {
 	animation-delay: 0s;
 }
@@ -66,6 +69,13 @@ h2, h1 {
 	text-shadow: 0px 0px 1px #fff;
   animation: blurFadeIn 2s ease-in 4s backwards;
   padding-top: 4rem;
+	max-width: 600px;
+	font-weight: 300;
+}
+#para{
+	display: flex;
+	justify-content: center;
+	
 }
 .sp-globe {
 	position: absolute;

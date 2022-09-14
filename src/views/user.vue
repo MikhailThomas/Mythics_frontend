@@ -51,4 +51,8 @@ export default {
  #edit{
   border-top: 1px solid;
  }
+ img{
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+ }
 </style>
