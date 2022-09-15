@@ -32,6 +32,9 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/user">User Page</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/contact">Contact</router-link>
+        </li>
       </ul>
     </div>
   </div>
